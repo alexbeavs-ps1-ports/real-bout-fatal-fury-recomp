@@ -1,0 +1,46 @@
+{
+  "format_version": 1,
+  "game": {
+    "name": "Real Bout Fatal Fury",
+    "id": "SCES-00561",
+    "boot_exe": "SCES_005.61"
+  },
+  "marketing": {
+    "description": "",
+    "publisher": "",
+    "year": "",
+    "region": "Europe",
+    "players": 1
+  },
+  "rom_identity": {
+    "cue_name": "Real Bout Fatal Fury (Europe).cue",
+    "bin_name": "Real Bout Fatal Fury (Europe) (Track 1).bin",
+    "track_counts": [
+      33
+    ],
+    "require_cue": true,
+    "data_track": {
+      "size": 28781424,
+      "md5": "61a7abe38bf45991564abba47be3c85d",
+      "sha1": "31596640335905fc904e7cefcf9238758c9073d5",
+      "crc32": "de8c1168"
+    },
+    "disc_fp": "8e800241f2a3f082ea928c12e58f864f87d7eb2e4847fba5c5ec7616db5ccd57"
+  },
+  "exe": {
+    "load_address": "0x80010000",
+    "entry_pc": "0x8001B22C",
+    "text_size": "0x0000F000",
+    "stack_base": "0x801FFFF0"
+  },
+  "seeds": {
+    "count": 159,
+    "source": "boot_exe_jal"
+  },
+  "warnings": [],
+  "notes": [
+    "entry_pc/load_address/text_size/stack_base taken from PS-X EXE header.",
+    "seeds are first-pass boot-EXE JAL targets (+ entry); expect to grow as overlays / runtime paths are discovered.",
+    "required_disc_fp is psxrecomp-toc-v1 (matches runtime DiscIdentity)."
+  ]
+}

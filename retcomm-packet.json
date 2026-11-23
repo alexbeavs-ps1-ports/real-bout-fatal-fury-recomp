@@ -1,0 +1,98 @@
+{
+  "format_version": 1,
+  "id": "real-bout-fatal-fury-psx",
+  "name": "Real Bout Fatal Fury",
+  "kind": "recomp",
+  "platform": "psx",
+  "source_repo": "real-bout-fatal-fury-recomp",
+  "rom_identity": {
+    "crc32": [
+      "de8c1168"
+    ],
+    "md5": [
+      "61a7abe38bf45991564abba47be3c85d"
+    ],
+    "sha1": [
+      "31596640335905fc904e7cefcf9238758c9073d5"
+    ],
+    "disc_serials": [
+      "SCES-00561"
+    ],
+    "sizes": [
+      28781424
+    ],
+    "filenames": [
+      "Real Bout Fatal Fury (Europe).cue",
+      "Real Bout Fatal Fury (Europe) (Track 1).bin"
+    ],
+    "track_counts": [
+      33
+    ],
+    "disc_fps": [
+      "8e800241f2a3f082ea928c12e58f864f87d7eb2e4847fba5c5ec7616db5ccd57"
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin",
+    ".chd"
+  ],
+  "bios_identity": {
+    "required": true,
+    "name": "SCPH5552.BIN",
+    "profile": "SCPH5552",
+    "crc32": [
+      "d786f0b9"
+    ],
+    "md5": [
+      "32736f17079d0b2b7024407c39bd3050"
+    ],
+    "sha1": [
+      "f6bc2d1f5eb6593de7d089c425ac681d6fffd3f0"
+    ],
+    "sha256": [
+      "1faaa18fa820a0225e488d9f086296b8e6c46df739666093987ff7d8fd352c09"
+    ],
+    "sizes": [
+      524288
+    ],
+    "filenames": [
+      "SCPH5552.BIN"
+    ]
+  },
+  "release": {
+    "github": "alexbeavs-ps1-ports/real-bout-fatal-fury-recomp",
+    "allow_prerelease": false,
+    "asset_glob": {
+      "windows-x64": "real-bout-fatal-fury-*-windows-x64.zip",
+      "linux-x64": "real-bout-fatal-fury-*-linux-x64.zip",
+      "macos-arm64": "real-bout-fatal-fury-*-macos-arm64.zip",
+      "macos-x64": "real-bout-fatal-fury-*-macos-x64.zip"
+    }
+  },
+  "launch": {
+    "windows": "real_bout_fatal_fury.exe",
+    "linux": "real_bout_fatal_fury",
+    "macos": "real_bout_fatal_fury"
+  },
+  "build": {
+    "source": {
+      "github": "alexbeavs-ps1-ports/real-bout-fatal-fury-recomp",
+      "ref": ""
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "min_version": "1.0.14"
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}

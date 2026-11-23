@@ -1,0 +1,59 @@
+# Autofilled by tools/new_project_layout/probe_disc.py from your legal dump.
+# Review before shipping. Runtime quirks / overlay seeds still need hand work.
+
+[game]
+name = "Real Bout Fatal Fury"
+id = "SCES-00561"
+players = 1
+exe = "disc/SCES_005.61"
+disc = "disc/Real Bout Fatal Fury (Europe).cue"
+discs = ["disc/Real Bout Fatal Fury (Europe).cue"]
+disc_serials = ["SCES-00561"]
+load_address = "0x80010000"
+entry_pc = "0x8001B22C"
+text_size = "0x0000F000"
+stack_base = "0x801FFFF0"
+
+# Digests are for data Track 01 (first BINARY FILE / TRACK 01).
+[prepare_disc]
+out_dir = "disc"
+bin_name = "Real Bout Fatal Fury (Europe) (Track 1).bin"
+cue_name = "Real Bout Fatal Fury (Europe).cue"
+boot_exe = "SCES_005.61"
+known_sizes = [28781424]
+known_md5 = [
+  "61a7abe38bf45991564abba47be3c85d",
+]
+known_sha1 = [
+  "31596640335905fc904e7cefcf9238758c9073d5",
+]
+known_crc32 = [
+  "de8c1168",
+]
+
+[recompiler]
+bios_config = "psxrecomp/bios/SCPH5552.toml"
+seeds = "seeds/ghidra_funcs.txt"
+out_dir = "generated"
+strict = true
+
+[runtime]
+openbios = false
+bios_hle = false
+window_title = "Real Bout Fatal Fury Recompiled"
+memcard_dir = "saves"
+overlay_cache = true
+
+[video]
+renderer = "opengl"
+aspect_ratio = "4:3"
+
+[controller]
+default_mode = "digital"
+
+# Online mount gate: digests + track count + optional TOC fingerprint
+# (see docs/NETPLAY.md).
+[netplay]
+require_cue = true
+required_tracks = 33
+required_disc_fp = "8e800241f2a3f082ea928c12e58f864f87d7eb2e4847fba5c5ec7616db5ccd57"

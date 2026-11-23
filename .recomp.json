@@ -1,0 +1,13 @@
+{
+  "$schema": "https://recomp.fyi/schema/v1.json",
+  "game": "Real Bout Fatal Fury",
+  "system": "PS1",
+  "type": "recomp",
+  "toolchain": "psxrecomp",
+  "status": "exploring",
+  "project": "real-bout-fatal-fury-recomp",
+  "original": {
+    "region": "Europe",
+    "serial": "SCES-00561"
+  }
+}
